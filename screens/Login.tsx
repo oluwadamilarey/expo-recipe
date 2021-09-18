@@ -47,6 +47,29 @@ const Login = ({ navigation }: { navigation: any }) => {
       </>
     );
   };
+
+  const renderDetail = () => {
+    return (
+      <View
+        style={{
+          flex: 1,
+          paddingHorizontal: SIZES.padding,
+        }}
+      >
+        <Text
+          style={{
+            marginTop: SIZES.radius,
+            width: "70%",
+            color: COLORS.gray,
+            ...FONTS.body3,
+          }}
+        >
+          Discover More Than 1200 food recipes in yours hands and cooking it
+          Easily!
+        </Text>
+      </View>
+    );
+  };
   return (
     <View
       style={{
@@ -55,6 +78,8 @@ const Login = ({ navigation }: { navigation: any }) => {
       }}
     >
       {renderHeader()}
+
+      {renderDetail()}
     </View>
   );
 };
