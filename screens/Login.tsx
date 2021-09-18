@@ -1,4 +1,5 @@
 import React from "react";
+import { CustomButton } from "../components";
 import { View, Text, TouchableOpacity, ImageBackground } from "react-native";
 
 import { LinearGradient } from "expo-linear-gradient";
@@ -67,9 +68,22 @@ const Login = ({ navigation }: { navigation: any }) => {
           Discover More Than 1200 food recipes in yours hands and cooking it
           Easily!
         </Text>
+        <View
+          style={{
+            flex: 1,
+            justifyContent: "center",
+          }}
+        >
+          <CustomButton
+            buttonText="Login"
+            colors={[COLORS.darkGreen, COLORS.lime]}
+            onPress={() => navigation.navigate("home")}
+          />
+        </View>
       </View>
     );
   };
+
   return (
     <View
       style={{
